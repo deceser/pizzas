@@ -1,0 +1,44 @@
+@import "../../../../styles/mixins";
+
+.body {
+  min-height: 300px;
+  padding-bottom: 30px;
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.products {
+  width: 60%;
+
+  @include screens-l {
+    width: 65%;
+  }
+  @include screens-m {
+    width: 100%;
+    order: 1;
+  }
+}
+
+.info {
+  width: 35%;
+
+  @include screens-l {
+    width: 20%;
+  }
+  @include screens-m {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.infoItem {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}

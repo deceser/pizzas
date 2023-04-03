@@ -1,0 +1,11 @@
+@import "../../../styles/variables";
+
+.iconButton {
+  background-color: transparent;
+  border: 0;
+  font-size: 30px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,34 @@
+@import "../../../styles/mixins";
+
+.customers {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 5%;
+  padding: 50px 0;
+
+  .infoBlock {
+    width: 40%;
+
+    @include screens-l {
+      width: 100%;
+    }
+
+    .text {
+      margin-top: 30px;
+      font-size: 22px;
+
+      @include screens-l {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .slider {
+    width: 55%;
+
+    @include screens-l {
+      width: 100%;
+    }
+  }
+}

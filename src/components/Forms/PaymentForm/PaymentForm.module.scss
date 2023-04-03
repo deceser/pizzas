@@ -1,0 +1,68 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px 0;
+}
+
+.firstBlock {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  .subText {
+    text-align: right;
+  }
+
+  span, a {
+    color: $color-muted-middle;;
+  }
+
+  span {
+    font-size: 15px;
+  }
+
+  a {
+    margin-left: 20px;
+    text-decoration: underline;
+    transition: color .1s ease-in-out;
+
+    &:hover {
+      color: $color-muted;
+    }
+
+    @include screens-l {
+      margin-left: 5px;
+    }
+
+    @include screens-m {
+      margin-left: 20px;
+    }
+
+    @include screens-xs {
+      margin-left: 10px;
+    }
+  }
+}
+
+.doubleInput {
+  display: flex;
+  gap: 20px;
+
+  @include screens-xs {
+    gap: 10px;
+  }
+}
+
+.paymentCheckboxes {
+  display: flex;
+  gap: 60px;
+}
+
+.checkbox {
+  display: flex;
+  gap: 7px;
+}

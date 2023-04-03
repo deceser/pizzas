@@ -1,0 +1,67 @@
+@import "../../styles/mixins";
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.form {
+  width: 52%;
+
+  @include screens-m {
+    width: 100%;
+  }
+}
+
+.cart {
+  width: 40%;
+
+  @include screens-l {
+    width: 45%;
+  }
+
+  @include screens-m {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+.cartUnderBlock {
+  margin-left: 160px;
+  text-align: right;
+
+  @include screens-s {
+    margin-left: 100px;
+  }
+}
+
+.textBlock {
+  h4 {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.totalPrice {
+  margin: 20px 0;
+  text-align: right;
+
+  label {
+    font-size: 22px;
+  }
+
+  span {
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 30px;
+  }
+}
+
+.checkoutMessenge {
+  text-align: right;
+  margin-top: 20px;
+  color: $color-danger;
+}

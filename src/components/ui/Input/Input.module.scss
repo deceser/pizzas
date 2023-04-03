@@ -1,0 +1,89 @@
+@import "../../../styles/variables";
+
+.input {
+  position: relative;
+  width: 100%;
+
+  input {
+    font-size: 16px;
+    background: #ffffff;
+    border: 1px solid #cacaca;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -khtml-border-radius: 5px;
+    width: 100%;
+    padding: 18px 14px;
+    transition: box-shadow ease 0.25s, border-color ease 0.25s;
+    box-sizing: border-box;
+
+    &:focus {
+      border-color: #1976d2;
+      box-shadow: 0 0 0 1px #1976d2;
+    }
+
+    &:focus ~ .label, &:not(:placeholder-shown) ~ .label {
+      background: white;
+      color: #1976d2;
+      transform: none;
+      top: -7px;
+    }
+
+    &:not(:focus) ~ .label {
+      color: $color-muted;
+    }
+  }
+}
+
+
+.input_error {
+  color: $color-danger;
+
+  input {
+    border-color: $color-danger;
+  }
+
+  input:not(:focus) ~ .label {
+    color: $color-danger;
+  }
+}
+
+.error {
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  font-size: 14px;
+  color: #f53737;
+}
+
+.label {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 25px;
+  display: block;
+  padding: 0 5px;
+  font-size: 13px;
+  white-space: nowrap;
+  color: $color-muted;
+  transition: 0.2s ease all;
+}
+
+.icon {
+  position: absolute;
+  z-index: 1;
+  top: 53%;
+  transform: translateY(-47%);
+  left: 10px;
+  display: block;
+  padding: 0 5px;
+  font-size: 13px;
+  white-space: nowrap;
+  font-size: 25px;
+}
+
+.input--with-icon input {
+  padding-left: 45px;
+}

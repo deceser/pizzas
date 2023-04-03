@@ -1,0 +1,31 @@
+@import "./variables";
+
+@mixin screens-xxs {
+  @media (max-width: $width-xxs) {
+    @content;
+  }
+}
+
+@mixin screens-xs {
+  @media (max-width: $width-xs) {
+    @content;
+  }
+}
+
+@mixin screens-s {
+  @media (max-width: $width-s) {
+    @content;
+  }
+}
+
+@mixin screens-m {
+  @media (max-width: $width-m) {
+    @content;
+  }
+}
+
+@mixin screens-l {
+  @media (max-width: $width-l) {
+    @content;
+  }
+}

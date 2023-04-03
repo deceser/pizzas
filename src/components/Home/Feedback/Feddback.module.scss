@@ -1,0 +1,43 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.feedback {
+  background: $color-success;
+  padding: 11px 0;
+
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .icon {
+    color: $color-dark;
+    border: 1px solid $color-dark;
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+
+    span {
+      font-size: 25px;
+
+      @include screens-s {
+        font-size: 18px;
+      }
+    }
+
+    @include screens-s {
+      height: 35px;
+      width: 35px;
+    }
+  }
+
+  span {
+    color: $color-dark;
+    font-size: 20px;
+
+    @include screens-s {
+      font-size: 16px;
+    }
+  }
+}

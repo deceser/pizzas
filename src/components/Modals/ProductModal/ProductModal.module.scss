@@ -1,0 +1,82 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.modal {
+  max-width: 630px;
+  width: 100%;
+
+  @include screens-m {
+    width: 90%;
+  }
+}
+
+.body {
+  overflow: hidden;
+  max-height: 100%;
+  text-align: center;
+}
+
+.image {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+  }
+}
+
+.selector {
+  margin: 20px 0;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+
+.price {
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.countBlock {
+}
+
+.addToCartBlock {
+  display: flex;
+  justify-content: right;
+  @include screens-s {
+    width: 100%;
+  }
+}
+
+.button {
+  @include screens-s {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.inCartBtn {
+  padding-right: 0;
+  padding-left: 0;
+  background: none;
+  color: $color-primary;
+
+  &:hover, &:active {
+    background: none;
+  }
+}
+
+.iconDone {
+  color: $color-primary !important;
+  font-weight: 700;
+  margin-right: 10px;
+}

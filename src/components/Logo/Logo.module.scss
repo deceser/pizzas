@@ -1,0 +1,35 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 20px;
+
+  img {
+    margin-right: 15px;
+  }
+
+  h1 {
+    color: #181818;
+    font-size: 24px !important;
+    letter-spacing: 1%;
+    text-transform: uppercase;
+    font-weight: 800;
+
+    @include screens-xs {
+      font-size: 22px !important;
+      font-weight: 700;
+    }
+  }
+
+  p {
+    color: $color-muted;
+
+    @include screens-s {
+      font-size: 12px;
+    }
+  }
+
+}

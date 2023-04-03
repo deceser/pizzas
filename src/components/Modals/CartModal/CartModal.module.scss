@@ -1,0 +1,56 @@
+@import "../../../styles/mixins";
+
+.modal {
+  transform: none;
+  left: auto;
+  right: 17%;
+  top: 8%;
+  max-width: 774px;
+
+  @include screens-l {
+    right: auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.body {
+  padding-right: 20px;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  flex-wrap: wrap;
+
+  .text {
+    font-size: 22px;
+    margin-right: 25px;
+  }
+}
+
+.totalPriceBlock {
+  @include screens-s {
+    margin-left: auto;
+  }
+}
+
+.totalPrice {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.buttonBlock {
+  @include screens-s {
+    margin-top: 30px;
+    width: 100%;
+  }
+}
+
+.button {
+  @include screens-s {
+    width: 100%;
+  }
+}

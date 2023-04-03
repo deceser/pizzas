@@ -1,0 +1,30 @@
+.iconBlock {
+  &_textRigth {
+    display: inline-flex;
+
+    .iconText {
+      margin-left: 20px;
+    }
+  }
+
+  &_textDown {
+    display: inline-block;
+    text-align: center;
+
+    .iconText {
+      margin-top: 10px;
+    }
+  }
+
+  .iconText {
+
+    h2 {
+      font-size: 26px;
+    }
+
+    span {
+      display: block;
+      font-size: 18px;
+    }
+  }
+}

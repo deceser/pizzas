@@ -1,0 +1,103 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.slider--default {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  .swiper-button-prev, .swiper-button-next {
+    background: rgba(255, 255, 255, 0.3);
+    height: 35px;
+    width: 35px;
+    border-radius: 50px;
+    transition: .1s ease-in;
+
+    &:after {
+      color: #000000;
+      font-size: 20px;
+    }
+
+    &:hover, &:active {
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    @include screens-m {
+      display: none;
+    }
+  }
+
+
+  .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+    bottom: 30px;
+    text-align: start;
+    left: 80px;
+
+    @include screens-xs {
+      left: 40px;
+    }
+  }
+
+
+  .swiper-pagination-bullet {
+    border-radius: 0;
+    width: 20px;
+    height: 3px;
+    background-color: $color-light;
+    opacity: 1;
+    border: 0;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $color-success;
+  }
+}
+
+.swiper-slide {
+  font-size: 20px;
+  color: $color-light;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.slider--minimal {
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
+  }
+
+  .swiper-pagination-bullet {
+    height: 12px;
+    width: 12px;
+    background-color: $color-muted;
+    opacity: 1;
+    border: 0;
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $color-primary;
+  }
+
+  .swiper-slide {
+    width: 100%;
+  }
+}

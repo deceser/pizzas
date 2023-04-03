@@ -1,0 +1,171 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.appBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__first {
+    display: flex;
+    width: 40%;
+
+    @include screens-m {
+      width: 55%;
+    }
+    @include screens-s {
+      width: 100%;
+    }
+  }
+
+  &__toggleBtn {
+    display: none;
+    margin-right: 10px;
+
+    &__icon {
+      color: black;
+      font-size: 40px;
+    }
+
+    @include screens-m {
+      display: inline-block;
+    }
+  }
+
+  &__closeBtn {
+    display: none;
+    position: absolute;
+    top: 46px;
+    left: 30px;
+    transform: -100vh;
+
+    &__icon {
+      color: $color-light;
+    }
+
+    @include screens-m {
+      display: inline-block;
+    }
+  }
+
+
+  &__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+
+
+    &__left {
+      display: flex;
+      align-items: center;
+
+      @include screens-m {
+        flex-direction: column;
+      }
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+      @include screens-m {
+        flex-direction: column;
+        align-items: unset;
+        width: 100%;
+      }
+    }
+
+    @include screens-m {
+      visibility: hidden;
+      z-index: 2;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: $color-primary;
+      transition: .5s ease-in;
+      transform: translateY(-100vh);
+    }
+  }
+
+  &_opened {
+    @include screens-m {
+      visibility: visible;
+      transform: none;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 10px;
+
+      @include screens-m {
+        margin-right: 0;
+      }
+    }
+
+  }
+
+  &__cartItem {
+    @include screens-m {
+      display: none;
+    }
+  }
+
+  &__phoneNumber {
+    a {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+
+      @include screens-m {
+        color: $color-light;
+      }
+    }
+
+    @media (max-width: 1272px) {
+      display: none;
+    }
+    @include screens-m {
+      order: 1;
+      display: inline-block;
+      margin-top: 20px;
+    }
+  }
+
+  &__mobileHeaderItems {
+    display: none;
+
+    &__phoneNumber {
+      @include screens-m {
+        margin-right: 10px;
+      }
+      @include screens-s {
+        display: none;
+      }
+    }
+
+    @include screens-m {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__btn {
+    @include screens-m {
+      background: none !important;
+      color: $color-light !important;
+    }
+  }
+}
